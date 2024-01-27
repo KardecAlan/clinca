@@ -14,6 +14,8 @@ public record DadosCadastroMedico(
         @Email // Anotacao para que o campo seja em formato de email
         String email,
         @NotBlank
+        String telefone,
+        @NotBlank
         @Pattern(regexp = "\\d{4,6}") // Anotacao para que o campo seja digito entre 4 a 6 numeros
         String crm,
         @NotNull // Nao e NotBlank pq nao e uma string e sim um enum
