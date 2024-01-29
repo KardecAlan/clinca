@@ -1,9 +1,6 @@
 package com.kardec.clinica.controller;
 
-import com.kardec.clinica.medico.DadosCadastroMedico;
-import com.kardec.clinica.medico.DadosListagemMedico;
-import com.kardec.clinica.medico.Medico;
-import com.kardec.clinica.medico.MedicoRepository;
+import com.kardec.clinica.medico.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -23,13 +20,20 @@ public class MedicoController {
 
     @PostMapping
     @Transactional
-    public void cadastrarMedicos(@RequestBody @Valid DadosCadastroMedico dados){
+    public void cadastrarMedico(@RequestBody @Valid DadosCadastroMedico dados){
         repository.save(new Medico(dados));
     }
 
     @GetMapping
-    public Page<DadosListagemMedico> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao){
+    public Page<DadosListagemMedico> listaCadastroMedicos(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao){
         return repository.findAll(paginacao).map(DadosListagemMedico::new);
+    }
+
+    @PutMapping
+    @Transactional
+    public void atualizarCadastro(@RequestBody @Valid DadosAtualizados dados){
+        var medico = repository.getReferenceById(dados.id());
+        medico.atualizarInformacoes(dados);
     }
 
 }
