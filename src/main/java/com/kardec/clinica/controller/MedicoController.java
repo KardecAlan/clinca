@@ -1,6 +1,7 @@
 package com.kardec.clinica.controller;
 
 import com.kardec.clinica.medico.*;
+import com.kardec.clinica.paciente.DadosDetalhamentoPaciente;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
