@@ -1,4 +1,4 @@
-package com.kardec.clinica.paciente;
+package com.kardec.clinica.domain.paciente;
 
 public record DadosListagemPaciente(Long id, String nome, String email, String cpf) {
 

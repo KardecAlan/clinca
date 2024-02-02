@@ -1,4 +1,4 @@
-package com.kardec.clinica.medico;
+package com.kardec.clinica.domain.medico;
 
 public record DadosListagemMedico(Long id, String nome, String email, String crm, Especialidade especialidade){
 

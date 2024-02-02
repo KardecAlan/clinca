@@ -1,6 +1,6 @@
-package com.kardec.clinica.medico;
+package com.kardec.clinica.domain.medico;
 
-import com.kardec.clinica.endereco.Endereco;
+import com.kardec.clinica.domain.endereco.Endereco;
 
 public record DadosDetalhamentoMedico(Long id, String nome, String email, String crm, String telefone, Especialidade especialidade, Endereco endereco) {
 

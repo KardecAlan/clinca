@@ -1,8 +1,10 @@
 package com.kardec.clinica.controller;
 
 
-import com.kardec.clinica.medico.DadosDetalhamentoMedico;
-import com.kardec.clinica.paciente.*;
+import com.kardec.clinica.domain.paciente.DadosListagemPaciente;
+import com.kardec.clinica.domain.paciente.Paciente;
+import com.kardec.clinica.domain.paciente.PacienteRepository;
+import com.kardec.clinica.domain.paciente.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

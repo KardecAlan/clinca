@@ -1,4 +1,4 @@
-package com.kardec.clinica.medico;
+package com.kardec.clinica.domain.medico;
 
 public enum Especialidade {
     ORTOPEDIA,

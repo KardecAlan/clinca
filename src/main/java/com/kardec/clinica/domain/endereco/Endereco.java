@@ -1,4 +1,4 @@
-package com.kardec.clinica.endereco;
+package com.kardec.clinica.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

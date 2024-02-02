@@ -1,6 +1,6 @@
-package com.kardec.clinica.medico;
+package com.kardec.clinica.domain.medico;
 
-import com.kardec.clinica.endereco.DadosEndereco;
+import com.kardec.clinica.domain.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizados(
